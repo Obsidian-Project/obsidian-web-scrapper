@@ -25,7 +25,10 @@ Specifications (the big table)
 Image
 Model name
 
-Maybe not CAT
+Maybe not CAT, Just John deere
 
-Just John deere
+Selectors
+
+To get links
+$(".container .table-comp table tbody tr th.first a").each(function(item){ console.log($(this).attr("href")) })
 
