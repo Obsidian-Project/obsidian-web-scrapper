@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha --recursive test"
+    "test": "mocha --no-timeouts --recursive test "
   },
   "author": "edson alcala",
   "license": "ISC",

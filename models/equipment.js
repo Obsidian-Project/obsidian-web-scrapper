@@ -14,6 +14,10 @@ const EquipmentSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  type: {
+    type: String,
+    required: true,
+  },
   details: {
     type: Array,
     required: true,
