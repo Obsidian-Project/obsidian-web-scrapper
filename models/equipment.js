@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const SubjectSchema = new mongoose.Schema({
+const EquipmentSchema = new mongoose.Schema({
   equipmentId: {
     type: Number,
     required: true,
@@ -10,20 +10,18 @@ const SubjectSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  characteristics: {
-    type: Number,
-    required: true,
-  },
-  Features: {
+  category: {
     type: String,
     required: true,
   },
-  Specifications: {
-    type: String,
+  details: {
+    type: Array,
+    required: true,
+  },
+  images: {
+    type: Array,
     required: true,
   }
 });
 
-module.exports = mongoose.model('Subject', SubjectSchema);
-
-//TODO research types in mongoose
+module.exports = mongoose.model('Equipment', EquipmentSchema);
