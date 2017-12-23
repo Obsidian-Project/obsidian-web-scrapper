@@ -1,4 +1,4 @@
-const Equipments = require('../models/equipments');
+const Equipments = require('../models/equipment');
 
 module.exports = {
 

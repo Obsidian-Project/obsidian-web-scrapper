@@ -138,8 +138,9 @@ class Scrapper{
                     });  
                     return item;
                 });
-                console.log(data);                
-                resolve(data);                
+                console.log(data);   
+                var merged = [].concat.apply([], data);                                                             
+                resolve(merged);                
             }).catch((error) => {              
                 console.log(error);
                 reject(error);

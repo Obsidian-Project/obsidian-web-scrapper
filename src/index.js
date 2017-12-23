@@ -1,3 +1,0 @@
-//clean database
-//scrape
-//push
