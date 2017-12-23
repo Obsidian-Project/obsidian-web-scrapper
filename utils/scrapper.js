@@ -128,11 +128,19 @@ class Scrapper{
     getAllData(){
         return new Promise((resolve, reject) => {
             var results = Promise.all([this.getTractorDetails(), this.getPlantingEquipmentDetails()]);
-            results.then(data => {
-                console.log(data);
+            results.then(data => {                
+                data.map((item) => {
+                    let index = 1;
+                    item.map((element) => {
+                        element.equipmentId = index;
+                        index++;
+                        return element;
+                    });  
+                    return item;
+                });
+                console.log(data);                
                 resolve(data);                
-            }).catch((error) => {
-                debugger;
+            }).catch((error) => {              
                 console.log(error);
                 reject(error);
             }); 
