@@ -128,9 +128,9 @@ class Scrapper{
     getAllData(){
         return new Promise((resolve, reject) => {
             var results = Promise.all([this.getTractorDetails(), this.getPlantingEquipmentDetails()]);
-            results.then(data => {                
-                data.map((item) => {
-                    let index = 1;
+            results.then(data => {  
+                let index = 1;              
+                data.map((item) => {                    
                     item.map((element) => {
                         element.equipmentId = index;
                         index++;
