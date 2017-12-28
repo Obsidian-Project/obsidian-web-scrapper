@@ -133,6 +133,12 @@ class Scrapper{
                 data.map((item) => {                    
                     item.map((element) => {
                         element.equipmentId = index;
+
+                        element.title = `${element.category} ${element.model}`;
+                        element.mainFeature = `${element.details[0]}`;
+                        element.description = `${element.details[1]}.${element.details[2]}`;
+                        element.imageUrl = element.images[2];
+
                         index++;
                         return element;
                     });  
