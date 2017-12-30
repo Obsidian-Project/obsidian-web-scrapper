@@ -138,7 +138,8 @@ class Scrapper{
                         element.mainFeature = `${element.details[0]}`;
                         element.description = `${element.details[1]}.${element.details[2]}`;
                         element.imageUrl = element.images[2];
-
+                        element.price = 900;
+                        element.landCoverage = 900;
                         index++;
                         return element;
                     });  
